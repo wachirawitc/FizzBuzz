@@ -7,10 +7,17 @@ namespace FizzBuzz.Test
     [TestFixture]
     public class FizzBuzzManagementTest
     {
+        private IRuleCollection collection;
+
+        [SetUp]
+        public void SetUp()
+        {
+            collection = new DefaultRuleCollection();
+        }
+
         [Test]
         public void GetText_ShouldReturn1_WhenInput1()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(1);
@@ -21,7 +28,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturn2_WhenInput2()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(2);
@@ -32,7 +38,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturnFizz_WhenInput3()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(3);
@@ -43,7 +48,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturn4_WhenInput4()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(4);
@@ -54,7 +58,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturnBuzz_WhenInput5()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(5);
@@ -65,7 +68,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturnFizz_WhenInput6()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(6);
@@ -76,7 +78,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturnFizz_WhenInput9()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(9);
@@ -87,7 +88,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturnBuzz_WhenInput10()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(10);
@@ -98,7 +98,6 @@ namespace FizzBuzz.Test
         [Test]
         public void GetText_ShouldReturnFizzBuzz_WhenInput15()
         {
-            IRuleCollection collection = new DefaultRuleCollection();
             var management = new FizzBuzzManagement(collection);
 
             string actual = management.GetText(15);
